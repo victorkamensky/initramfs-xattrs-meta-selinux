@@ -1,0 +1,24 @@
+Index: refpolicy/policy/modules/kernel/files.te
+===================================================================
+--- refpolicy.orig/policy/modules/kernel/files.te
++++ refpolicy/policy/modules/kernel/files.te
+@@ -117,7 +117,6 @@ type root_t;
+ files_mountpoint(root_t)
+ files_poly_parent(root_t)
+ kernel_rootfs_mountpoint(root_t)
+-genfscon rootfs / gen_context(system_u:object_r:root_t,s0)
+ 
+ #
+ # src_t is the type of files in the system src directories.
+Index: refpolicy/policy/modules/kernel/filesystem.te
+===================================================================
+--- refpolicy.orig/policy/modules/kernel/filesystem.te
++++ refpolicy/policy/modules/kernel/filesystem.te
+@@ -38,6 +38,7 @@ fs_use_xattr overlay gen_context(system_
+ fs_use_xattr squashfs gen_context(system_u:object_r:fs_t,s0);
+ fs_use_xattr xfs gen_context(system_u:object_r:fs_t,s0);
+ fs_use_xattr zfs gen_context(system_u:object_r:fs_t,s0);
++fs_use_xattr rootfs gen_context(system_u:object_r:fs_t,s0);
+ 
+ # Use the allocating task SID to label inodes in the following filesystem
+ # types, and label the filesystem itself with the specified context.

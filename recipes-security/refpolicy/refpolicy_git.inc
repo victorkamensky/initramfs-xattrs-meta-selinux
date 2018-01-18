@@ -57,4 +57,9 @@ SRC_URI += " \
             file://ftp-add-ftpd_t-to-mlsfilewrite.patch \
            "
 
+# SELinux initramfs with xattrs fix
+SRC_URI += " \
+            file://selinux-initramfs-xattrs.patch \
+           "
+
 include refpolicy_common.inc
