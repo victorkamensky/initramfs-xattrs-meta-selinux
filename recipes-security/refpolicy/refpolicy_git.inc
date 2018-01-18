@@ -3,8 +3,8 @@ PV = "2.20170805+git${SRCPV}"
 SRC_URI = "git://github.com/TresysTechnology/refpolicy.git;protocol=git;branch=master;name=refpolicy;destsuffix=refpolicy"
 SRC_URI += "git://github.com/TresysTechnology/refpolicy-contrib.git;protocol=git;branch=master;name=refpolicy-contrib;destsuffix=refpolicy/policy/modules/contrib"
 
-SRCREV_refpolicy = "${AUTOREV}"
-SRCREV_refpolicy-contrib = "${AUTOREV}"
+SRCREV_refpolicy = "88e821f369200889c318dcfa3ab5bb0c2b4385a1"
+SRCREV_refpolicy-contrib = "5f246ef917fa909f359aec0c561a64513651e8fe"
 SRCREV_FORMAT = "refpolicy.refpolicy-contrib"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/refpolicy-git:"
