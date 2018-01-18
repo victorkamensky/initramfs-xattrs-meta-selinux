@@ -10,6 +10,9 @@ IMAGE_INSTALL = "\
 	util-linux-agetty \
 	packagegroup-core-boot \
 	packagegroup-selinux-minimal \
+        attr \
+        cpio \
+        procps \
 "
 
 inherit selinux-image
