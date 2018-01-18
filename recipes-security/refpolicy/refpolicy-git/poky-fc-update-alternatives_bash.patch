@@ -14,11 +14,11 @@ Index: refpolicy/policy/modules/kernel/corecommands.fc
 ===================================================================
 --- refpolicy.orig/policy/modules/kernel/corecommands.fc
 +++ refpolicy/policy/modules/kernel/corecommands.fc
-@@ -6,6 +6,7 @@
- /bin/d?ash			--	gen_context(system_u:object_r:shell_exec_t,s0)
- /bin/bash			--	gen_context(system_u:object_r:shell_exec_t,s0)
- /bin/bash2			--	gen_context(system_u:object_r:shell_exec_t,s0)
+@@ -141,6 +141,7 @@ ifdef(`distro_gentoo',`
+ /usr/bin/d?ash			--	gen_context(system_u:object_r:shell_exec_t,s0)
+ /usr/bin/bash			--	gen_context(system_u:object_r:shell_exec_t,s0)
+ /usr/bin/bash2			--	gen_context(system_u:object_r:shell_exec_t,s0)
 +/bin/bash\.bash			--	gen_context(system_u:object_r:shell_exec_t,s0)
- /bin/fish			--	gen_context(system_u:object_r:shell_exec_t,s0)
- /bin/ksh.*			--	gen_context(system_u:object_r:shell_exec_t,s0)
- /bin/mksh			--	gen_context(system_u:object_r:shell_exec_t,s0)
+ /usr/bin/fish			--	gen_context(system_u:object_r:shell_exec_t,s0)
+ /usr/bin/git-shell		--	gen_context(system_u:object_r:shell_exec_t,s0)
+ /usr/bin/insmod_ksymoops_clean	--	gen_context(system_u:object_r:bin_t,s0)
